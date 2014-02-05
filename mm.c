@@ -132,8 +132,8 @@ void *mm_malloc(size_t size) {
 	}
 	/* otherwise, allocate memory and set epilogue */
 	PUT(HDRP(list), PACK(asize, 1));
-    PUT(FTRP(list), PACK(asize, 1));
-    PUT(FTRP(list) + WSIZE, PACK(0, 1));
+    	PUT(FTRP(list), PACK(asize, 1));
+    	PUT(FTRP(list) + WSIZE, PACK(0, 1));
 	return list;
 }
 
